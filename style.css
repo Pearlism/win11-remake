@@ -1,0 +1,265 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background:url(https://4kwallpapers.com/images/walls/thumbs_2t/8995.png);
+   
+    background-size:cover;
+    overflow: hidden;
+}
+#windows-desktop{
+    width:100%;
+    height:calc(100vh - 50px);
+}
+#windows-taskbar{
+    height:50px;
+    width:100%;
+    background-color: #4015656e;
+    display:flex;
+    position:relative;
+    z-index:10;
+    backdrop-filter: blur(8px);
+    color:white;
+    padding:5px;
+}
+#windows-taskbar>#taskbar-tray{
+margin-left:auto;
+display:flex;
+width:fit-content;
+}
+#windows-taskbar>#taskbar-tray>#DateTime{
+width:fit-content;
+text-align: right;
+height:100%;
+
+font-family:Arial, Helvetica, sans-serif;
+font-size:0.7em;
+font-weight: 300;
+padding:5px;
+border-radius: 5px;
+line-height:1.3em;
+transition: 0.1s;
+user-select:none;
+box-sizing:border-box;
+letter-spacing: 0.5px;
+}
+#windows-taskbar>#taskbar-tray>svg{
+    fill:white;
+    position: relative;
+    top:-5px;
+    height:calc(100% + 10px);
+    width:25px;
+    padding:5px;
+    
+}
+#windows-taskbar>#taskbar-tray>#DateTime:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+
+}
+#windows-taskbar>#taskbar-tray>svg:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+
+}
+#sound-network-button{
+    display:flex;
+    width:auto;
+    border-radius: 5px;
+    
+transition: 0.15s;
+padding:5px;
+
+    margin:0px 1px;
+
+}
+#sound-network-button>svg{
+    margin:5px;
+}
+#sound-network-button:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
+.taskbar-apps{
+display: flex;
+width:fit-content;
+margin-right:auto
+}
+.taskbar-apps>svg{
+    margin:0.5px 3px;
+    padding:9px;
+    width:auto;
+    height:100%;
+    transition-duration: 0.2s;
+    border-radius: 5px;
+}
+.taskbar-apps>svg:hover{
+    background-color: rgba(255, 255, 255, 0.07);
+}
+#sound-network-menu{
+    width:300px;
+    height:300px;
+    backdrop-filter: blur(8px);
+    position: absolute;
+    
+
+    bottom:55px;
+    right:-300px;
+    background-color: #40156585;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#menu-card-container{
+    width:100%;
+    height:calc(100% - 50px);
+    display:grid;
+    grid-template-columns: calc(33% - 5px) calc(33% - 5px) calc(33% - 5px);
+    padding:20px;
+    gap:15px;
+    grid-template-rows: calc(50% - 5px) calc(50% - 5px);
+    
+}
+.menu-cards{
+    font-size: 0.78em;
+    color:white;
+    display:flex;
+    text-align: center;
+    font-family:sans-serif;
+    flex-direction: column;
+
+}
+.menu-cards>.card-icon{
+    background-color: #4b1f72;
+    padding:15px 0px;
+    margin-bottom:5px;
+    border-radius: 5px;;
+
+}
+.menu-cards>.card-icon:hover{
+    background-color: #6f2ea9;
+}
+.menu-cards>.card-icon>svg{
+    width:30px;
+    height:30px;margin:auto;
+    fill:white;
+}
+#sound-slider{
+    width:100%;
+    background-color: #4015652f;
+    height: 50px;
+    padding:20px;
+    display:flex;
+
+}
+
+#sound-slider>input{
+    width:100%;
+    background-color: #6f2ea9;
+    margin:auto;
+
+}
+input[type=range]::-webkit-slider-runnable-track{
+    background-color: #733ba3;
+    border-radius: 20px;
+    height:5px;
+
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -5px; /* Centers thumb on the track */
+    background-color: #5cd5eb;
+    height: 2rem;
+    width: 1rem;    
+ }
+ #StartMenu{
+    width:500px;
+    height:500px;
+    background-color: #702ea98f;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    bottom:-500px;
+    left:5px;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding:20px;
+    overflow:hidden;
+    font-family: sans-serif;
+    color:white;
+ }
+
+#StartMenu>#SearchApps{
+    width:100%;
+    padding:5px;
+    background-color: #252422;
+    border-radius: 5px;
+    border:none;
+    border-bottom:3px solid rgb(22, 101, 203);
+    font-family: sans-serif;
+    color:white;
+}
+#StartMenu>#SearchApps:focus{
+    border:0px;
+    border-bottom:3px solid rgb(22, 101, 203);
+    outline:0px;
+}
+#StartMenu>#SearchApps::placeholder{
+    color:white;
+    font-family: sans-serif;
+}
+#StartMenu>#PinnedApps{
+    font-family: sans-serif;
+    font-size: 0.8em;
+    padding:0px 20px;
+    display:grid;
+    height:250px;
+    width:100%;
+    grid-template-columns:repeat(5,20%);
+    grid-template-rows:repeat(3,33.333333333333%);
+}
+#StartMenu>#PinnedApps>.PinnedAppTile{
+    transition-duration: 0.3s;
+    border-radius: 5px;
+    background-color:transparent;
+    display:flex;
+    flex-direction: column;
+    padding:0px;
+    font-family: sans-serif;
+    text-align: center;
+    padding:10px;
+}
+#StartMenu>#PinnedApps>.PinnedAppTile>svg,#StartMenu>#PinnedApps>.PinnedAppTile>img{
+    width:fit-content;
+    
+    padding:10px;
+    height:50px;
+    margin:auto;
+}
+#StartMenu>#PinnedApps>.PinnedAppTile:hover{
+    background-color:#6417a8d4;
+}
+#StartMenu>h3{
+    display:flex;
+    align-items: center;
+    padding:20px;
+    
+}
+#StartMenu>h3>button{
+    margin-left:auto;
+    padding:5px;
+    background-color:#7a45a9b1;
+    border:none;
+    color:white;
+    padding:5px;
+    box-shadow: none;
+    border-radius: 5px;;
+}
+#RecomendedApps{
+    width:100%;
+    height:50px;
+    font-family: sans-serif;
+color:rgb(187, 183, 183);
+font-size: 0.7em;
+}
+a{
+    color:rgb(1, 115, 255);
+}
